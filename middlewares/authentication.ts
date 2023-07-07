@@ -5,7 +5,7 @@ import { UserModel } from "../models/user.model";
 const authentication = (req: Request, res: Response, next: NextFunction) => {
   const token = req.headers?.authorization?.split(" ")[1] || req.cookies?.token;
   if (token) {
-    jwt.verify(token, process.env.KEY, async (err, decoded: any) => {
+    jwt.verify(token, process.env.SECKEY, async (err, decoded: any) => {
       if (err) {
         console.log(err);
         return res.status(401).send({ msg: "Please log in again", err: err.message });
