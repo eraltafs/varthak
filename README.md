@@ -49,9 +49,13 @@
 - URL: /books
 - Description: Get a list of books based on user role
 - Query Parameters:
+    - https://varthak.onrender.com/books?new=1
     - old (number, optional): Set to 1 to retrieve books created 10 minutes ago and older
     - new (number, optional): Set to 1 to retrieve books created less than 10 minutes ago
-- Headers: - authentication (string): JWT token
+- Headers: - authorization (string): Bearer (JWT token)
+
+    - ### Note:- if your user role is  `VIEWER` then you can only see your created books only if your user role is  `VIEW_ALL` then you can all books 
+
 ### Create Book
 - Method: POST
 - URL: /books
@@ -60,7 +64,7 @@
     - title (string): Book title
     - author (string): Book author
 - Headers:
-    - authentication (string): JWT token
+    - authorization (string): Bearer (JWT token)
     - Content-Type: application/json
 ## Testing APIs
 - You can use tools like Postman or ThunderClient to test the APIs. Set the appropriate HTTP method, URL, request body, and headers as mentioned in the API documentation above. 
