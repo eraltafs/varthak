@@ -6,16 +6,23 @@
 - Node.js (version 18.16.0)
 ### Installation 
 1. Clone the repository:
-    - git clone <repository-url>
+    ``` 
+    git clone <repository-url>
+    ```
 2. Install dependencies:
-    - cd varthak
-    - npm install
+    ```
+    cd varthak
+    npm install
+    ```
 3. Set environment variables:
     - Create a `.env` file in the project root directory
     - Add the following environment variables and set their values:
-    - ``` MONGO_URL=<your-mongodb-connection-string SECKEY=<your-secret-key> ```
+        - ``` MONGO_URL=<your-mongodb-connection-string``` 
+        - ```SECKEY=<your-secret-key> ```
 4. Start the server:
-    - npm start
+    ```
+    npm start
+    ```
 5. The server will be running locally at
     - http://localhost:8000
 ## API Endpoints
