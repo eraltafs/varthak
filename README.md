@@ -5,10 +5,10 @@
 Node.js (version 18.16.0)
 ### Installation 
 1. Clone the repository:
-   git clone <repository-url>
+    - git clone <repository-url>
 2. Install dependencies:
-   cd varthak
-   npm install
+    - cd varthak
+    - npm install
 3. Set environment variables:
     - Create a `.env` file in the project root directory
     - Add the following environment variables and set their values:
@@ -16,23 +16,23 @@ Node.js (version 18.16.0)
 4. Start the server:
    npm start
 5. The server will be running locally at http://localhost:8000
-6. ## API Endpoints
-7. ### Sign Up
-8.      - Method: POST
-9.      - URL: /signup
-10.     - Description: Create a new user account
-11.     - Request Body:
-12.         - email (string): User's email address
-13.         - password (string): User's password
-14.         - roles (array): User roles (e.g., ["CREATOR", "VIEWER"])
-    ### Log In
-        - Method: POST
-        - URL: /login
-        - Description: Authenticate user and generate JWT token
-        - Request Body:
-            - email (string): User's email address
-            - password (string): User's password
-        - Response:
+## API Endpoints
+### Sign Up
+      - Method: POST
+      - URL: /signup
+     - Description: Create a new user account
+     - Request Body:
+         - email (string): User's email address
+         - password (string): User's password
+         - roles (array): User roles (e.g., ["CREATOR", "VIEWER"])
+### Log In
+      - Method: POST
+      - URL: /login
+      - Description: Authenticate user and generate JWT token
+      - Request Body:
+          - email (string): User's email address
+          - password (string): User's password
+          - Response:
             - msg (string): Success message
             - token (string): JWT token
     ### Get Books
