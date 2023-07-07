@@ -54,7 +54,7 @@
     - new (number, optional): Set to 1 to retrieve books created less than 10 minutes ago
 - Headers: - authorization (string): Bearer (JWT token)
 
-    - ### Note:- if user role is  `VIEWER` then user can only see only created books by them  if  user role is  `VIEW_ALL` then user can see or access all books 
+    - ### Note:- if user role is  `VIEWER` then user can only see only created books by them  if  user role is  `VIEW_ALL` then user can see or accbhaiess all books 
 
 ### Create Book
 - Method: POST
