@@ -1,8 +1,9 @@
 # Varthak API Documentation 
-## Base API URL https://varthak.onrender.com/
+## Base API URL 
+- https://varthak.onrender.com/
 ## Local Development 
 ### Prerequisites - 
-Node.js (version 18.16.0)
+- Node.js (version 18.16.0)
 ### Installation 
 1. Clone the repository:
     - git clone <repository-url>
@@ -14,44 +15,45 @@ Node.js (version 18.16.0)
     - Add the following environment variables and set their values:
     - ``` MONGO_URL=<your-mongodb-connection-string SECKEY=<your-secret-key> ```
 4. Start the server:
-   npm start
-5. The server will be running locally at http://localhost:8000
+    - npm start
+5. The server will be running locally at
+    - http://localhost:8000
 ## API Endpoints
 ### Sign Up
-      - Method: POST
-      - URL: /signup
-     - Description: Create a new user account
-     - Request Body:
-         - email (string): User's email address
-         - password (string): User's password
-         - roles (array): User roles (e.g., ["CREATOR", "VIEWER"])
+- Method: POST
+- URL: /signup
+- Description: Create a new user account
+- Request Body:
+    - email (string): User's email address
+    - password (string): User's password
+    - roles (array): User roles (e.g., ["CREATOR", "VIEWER"])
 ### Log In
-      - Method: POST
-      - URL: /login
-      - Description: Authenticate user and generate JWT token
-      - Request Body:
-          - email (string): User's email address
-          - password (string): User's password
-          - Response:
-            - msg (string): Success message
-            - token (string): JWT token
-    ### Get Books
-        - Method: GET
-        - URL: /books
-        - Description: Get a list of books based on user role
-        - Query Parameters:
-             - old (number, optional): Set to 1 to retrieve books created 10 minutes ago and older
-             - new (number, optional): Set to 1 to retrieve books created less than 10 minutes ago
-        - Headers: - authentication (string): JWT token
-    ### Create Book
-        - Method: POST
-        - URL: /books
-        - Description: Create a new book
-        - Request Body:
-            - title (string): Book title
-            - author (string): Book author
-        - Headers:
-            - authentication (string): JWT token
-            - Content-Type: application/json
-    ## Testing APIs
-        You can use tools like Postman or ThunderClient to test the APIs. Set the appropriate HTTP method, URL, request body, and headers as mentioned in the API documentation above. 
+- Method: POST
+- URL: /login
+- Description: Authenticate user and generate JWT token
+- Request Body:
+    - email (string): User's email address
+    - password (string): User's password
+    - Response:
+    - msg (string): Success message
+    - token (string): JWT token
+### Get Books
+- Method: GET
+- URL: /books
+- Description: Get a list of books based on user role
+- Query Parameters:
+    - old (number, optional): Set to 1 to retrieve books created 10 minutes ago and older
+    - new (number, optional): Set to 1 to retrieve books created less than 10 minutes ago
+- Headers: - authentication (string): JWT token
+### Create Book
+- Method: POST
+- URL: /books
+- Description: Create a new book
+- Request Body:
+    - title (string): Book title
+    - author (string): Book author
+- Headers:
+    - authentication (string): JWT token
+    - Content-Type: application/json
+## Testing APIs
+- You can use tools like Postman or ThunderClient to test the APIs. Set the appropriate HTTP method, URL, request body, and headers as mentioned in the API documentation above. 
